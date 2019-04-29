@@ -6,6 +6,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
@@ -22,6 +24,7 @@ import java.time.ZoneId;
 public class ExceptionController {
 
     @ExceptionHandler(value = NullpointException.class)
+    @ResponseBody
     public ResponseEntity<ErrorResponse> handleJwtExpiredException(RuntimeException e, HttpServletRequest request) {
         log.debug("NullpointException");
         ErrorResponse errorResponse = getErrorResponse(HttpStatus.UNAUTHORIZED, e, request);
