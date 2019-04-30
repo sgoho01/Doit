@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
  * @author : Song.gunho
  * <p>
  * Date: 2019-04-30
- * Copyright(©) 2019 by ATOSTUDY.
  */
 @Slf4j
 public class TestFilter implements HandlerInterceptor {
