@@ -1,5 +1,6 @@
 package com.ghsong.filter.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,15 +10,18 @@ import org.springframework.web.bind.annotation.RestController;
  * Date: 2019-04-30
  */
 @RestController
-public class TestController {
+@Slf4j
+public class EventController {
 
-    @GetMapping("/api")
+    @GetMapping("/event")
     public String getEvent() {
+        log.debug("Get /event ::");
         return "events";
     }
 
-    @GetMapping("/api/user")
+    @GetMapping("/event/user")
     public String getUser() {
+        log.debug("Get /event/user ::");
         return "user";
     }
 
