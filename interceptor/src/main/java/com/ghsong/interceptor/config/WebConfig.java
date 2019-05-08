@@ -1,6 +1,6 @@
 package com.ghsong.interceptor.config;
 
-import com.ghsong.interceptor.filter.EventInterceptor;
+import com.ghsong.interceptor.interceptor.EventInterceptor;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
