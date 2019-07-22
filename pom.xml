@@ -11,6 +11,8 @@
 
     <modules>
         <module>exception</module>
+        <module>filter</module>
+        <module>interceptor</module>
     </modules>
 
 </project>
